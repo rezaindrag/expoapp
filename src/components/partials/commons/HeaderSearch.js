@@ -18,9 +18,10 @@ class HeaderSearch extends Component {
 			return (
 				<View style={styles.searchPost.headerContainerIOS}>
 					<View style={styles.header.actionSection}>
-						<TouchableWithoutFeedback
+						<TouchableHighlight
 							onPress={() => goBack()}
 							style={styles.header.touchable}
+							underlayColor="#DDD"
 						>
 							<View>
 								<Image 
@@ -28,7 +29,7 @@ class HeaderSearch extends Component {
 									source={require('../../../../assets/icons/ic_arrow_back_black_48dp.png')}
 								/>
 							</View>
-						</TouchableWithoutFeedback>
+						</TouchableHighlight>
 					</View>
 					<View style={styles.searchPost.inputSearchWrapper}>
 						<TextInput 
@@ -49,13 +50,13 @@ class HeaderSearch extends Component {
 				<View style={styles.header.actionSection}>
 					<TouchableHighlight
 						onPress={() => goBack()}
-						underlayColor="#DDD"
 						style={styles.header.touchable}
+						underlayColor="#DDD"
 					>
 						<View>
 							<Image 
 								style={styles.header.actionIcon}
-								source={require('../../../../assets/icons/arrow_back_android_black.png')}
+								source={require('../../../../assets/icons/ic_arrow_back_black_48dp.png')}
 							/>
 						</View>
 					</TouchableHighlight>

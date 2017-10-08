@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "expoapp",
-    "description": "An empty new project",
-    "slug": "expoapp",
+    "name": "Marketing App",
+    "description": "Learn Digital Marketing Is Easy",
+    "slug": "marketingapp",
     "privacy": "public",
     "sdkVersion": "21.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
     "primaryColor": "#cccccc",
-    "icon": "./assets/icons/app-icon.png",
+    "icon": "./assets/icons/_app-icon.png",
     "loading": {
-      "icon": "./assets/icons/loading-icon.png"
+      "icon": "./assets/icons/_loading-icon.png"
     },
     "packagerOpts": {
       "assetExts": ["ttf", "mp4"]

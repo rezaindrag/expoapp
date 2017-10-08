@@ -17,28 +17,30 @@ class Header extends Component {
 		if (iconLeft) {
 			if (Platform.OS === 'ios') {
 				return (
-					<TouchableWithoutFeedback
+					<TouchableHighlight
 						onPress={actionLeft}
 						style={styles.header.touchableIOS}
+						underlayColor="#0D47A1"
 					>
 						<Image
 							style={styles.header.actionIcon}
 							source={iconLeft}
 						/>
-					</TouchableWithoutFeedback>
+					</TouchableHighlight>
 				);
 			}
 
 			return (
-				<TouchableWithoutFeedback
+				<TouchableHighlight
 					onPress={actionLeft}
 					style={styles.header.touchable}
+					underlayColor="#0D47A1"
 				>
 					<Image
 						style={styles.header.actionIcon}
 						source={iconLeft}
 					/>
-				</TouchableWithoutFeedback>
+				</TouchableHighlight>
 			);
 		}
 
@@ -51,28 +53,30 @@ class Header extends Component {
 		if (iconRight) {
 			if (Platform.OS === 'ios') {
 				return (
-					<TouchableWithoutFeedback
+					<TouchableHighlight
 						onPress={actionRight}
 						style={styles.header.touchableIOS}
+						underlayColor="#0D47A1"
 					>
 						<Image
 							style={styles.header.actionIcon}
 							source={iconRight}
 						/>
-					</TouchableWithoutFeedback>
+					</TouchableHighlight>
 				);
 			}
 
 			return (
-				<TouchableWithoutFeedback
+				<TouchableHighlight
 					onPress={actionRight}
 					style={styles.header.touchable}
+					underlayColor="#0D47A1"
 				>
 					<Image
 						style={styles.header.actionIcon}
 						source={iconRight}
 					/>
-				</TouchableWithoutFeedback>
+				</TouchableHighlight>
 			);
 		}
 

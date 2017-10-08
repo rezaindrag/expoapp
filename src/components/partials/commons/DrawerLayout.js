@@ -221,13 +221,13 @@ class DrawerAndroid extends Component {
 			}
 		}
 
-		if (Platform.OS === 'ios') {
-			if (isConnected) {
-				var label = <Text style={styles.sideMenu.nameProfile}>Silahkan Masuk!</Text>;
-			} else {
-				var label = <Text style={styles.sideMenu.nameProfile}>Koneksi Terputus...</Text>;
-			}
+		if (isConnected) {
+			var label = <Text style={styles.sideMenu.nameProfile}>Silahkan Masuk!</Text>;
+		} else {
+			var label = <Text style={styles.sideMenu.nameProfile}>Koneksi Terputus...</Text>;
+		}
 
+		if (Platform.OS === 'ios') {
 			return (
 				<View style={styles.sideMenu.headerIOS}>
 					<View style={styles.sideMenu.imageProfileWrapper}>

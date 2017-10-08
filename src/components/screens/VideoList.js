@@ -179,7 +179,7 @@ class VideoList extends Component {
 					<View>
 						<Text style={styles.videoList.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sequi optio vitae nulla odit perspiciatis praesentium soluta nihil, dolore aperiam, illo. Quos quo molestiae commodi placeat earum doloremque. Quos, dolorum.</Text>
 						<Text style={styles.videoList.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sequi optio vitae nulla odit perspiciatis praesentium soluta nihil, dolore aperiam, illo. Quos quo molestiae commodi placeat earum doloremque. Quos, dolorum.</Text>
-						<Text style={styles.videoList.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sequi optio vitae nulla odit perspiciatis praesentium soluta nihil, dolore aperiam, illo. Quos quo molestiae commodi placeat earum doloremque. Quos, dolorum. [Tutup]</Text>
+						<Text style={styles.videoList.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sequi optio vitae nulla odit perspiciatis praesentium soluta nihil, dolore aperiam, illo. Quos quo molestiae commodi placeat earum doloremque. Quos, dolorum.</Text>
 					</View>
 				</TouchableWithoutFeedback>
 			);
@@ -190,7 +190,8 @@ class VideoList extends Component {
 				onPress={() => this.setState({ descriptionCollapse: !this.state.descriptionCollapse })}
 			>
 				<View>
-					<Text style={styles.videoList.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sequi optio vitae [Selengkapnya]</Text>
+					<Text style={styles.videoList.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sequi optio vitae</Text>
+					<Text style={{ color: '#1565C0' }}>Selengkapnya</Text>
 				</View>
 			</TouchableWithoutFeedback>
 		);

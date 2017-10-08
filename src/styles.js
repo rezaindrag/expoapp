@@ -58,7 +58,7 @@ const styles = {
 	},
 	header: {
 		container: { height: 78, paddingTop: 24, backgroundColor: PRIMARY_COLOR, alignItems: 'center', flexDirection: 'row' },
-		containerIOS: { height: 70, paddingTop: 20, backgroundColor: PRIMARY_COLOR, alignItems: 'center', flexDirection: 'row' },
+		containerIOS: { height: 74, paddingTop: 24, backgroundColor: PRIMARY_COLOR, alignItems: 'center', flexDirection: 'row' },
 		titleSection: {	alignItems: 'center', justifyContent: 'center', flex: 1, paddingLeft: 14, paddingRight: 14 },
 		title: { color: 'white', fontSize: 20, fontWeight: 'bold' },
 		actionSection: { width: 50, alignItems: 'center', justifyContent: 'center' },
@@ -107,7 +107,7 @@ const styles = {
 	},
 	searchPost: {
 		headerContainer: { height: 78, paddingTop: 24, backgroundColor: '#F7F7F7', flexDirection: 'row' },
-		headerContainerIOS: { height: 70, paddingTop: 20, backgroundColor: '#F7F7F7', flexDirection: 'row' },
+		headerContainerIOS: { height: 74, paddingTop: 24, backgroundColor: '#F7F7F7', flexDirection: 'row' },
 		inputSearchWrapper: { flex: 1, alignItems: 'flex-start', justifyContent: 'center' },
 		inputSearch: { color: TEXT_COLOR, height: 45, width: '100%', backgroundColor: '#F7F7F7', fontSize: 16, paddingRight: 12 },
 		notFoundWrapper: { justifyContent: 'center', alignItems: 'center', height: 50 }

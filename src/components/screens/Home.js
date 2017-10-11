@@ -7,6 +7,7 @@ import {
 	ActivityIndicator,
 	TouchableHighlight,
 	TouchableNativeFeedback,
+	TouchableWithoutFeedback,
 	Button,
 	NetInfo,
 	Image
@@ -14,7 +15,12 @@ import {
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import styles from '../../styles';
-import { fetchPost, refreshPost } from '../../actions';
+import { 
+	fetchPost, 
+	refreshPost, 
+	changeScreen 
+} from '../../actions';
+import { GetVideoButton } from '../partials/commons';
 import CategoryItem from '../partials/CategoryItem';
 import PostItem from '../partials/PostItem';
 
@@ -32,8 +38,14 @@ class Home extends Component {
 		this.props.fetchPost();
 	}
 
+	handleGetVideoButton(screenName) {
+		const { navigate } = this.props.navigation;
+
+		navigate('VideoListPreview');
+	}
+
 	renderPost(item, i) {
-		return <PostItem key={i} { ...this.props } item={item} i={i}  />
+		return <PostItem key={i} { ...this.props } item={item} i={i} />
 	}
 
 	renderPostList() {
@@ -85,11 +97,10 @@ class Home extends Component {
 	}
 
 	render() {
-		const { goBack, navigate } = this.props.navigation;
-
 		return (
 			<View style={styles.mainContainer}>
 				{ this.renderPostList() }
+				<GetVideoButton {...this.props} />
 			</View>
 		);
 	}
@@ -108,5 +119,6 @@ const mapStateToProps = ({ post }) => {
 
 export default connect(mapStateToProps, { 
 	fetchPost,
-	refreshPost
+	refreshPost,
+	changeScreen
 })(Home);

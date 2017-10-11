@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
 	View,
 	Text,
-	TouchableHighlight,
 	TouchableWithoutFeedback,
 	Image,
 	Platform
@@ -17,30 +16,30 @@ class Header extends Component {
 		if (iconLeft) {
 			if (Platform.OS === 'ios') {
 				return (
-					<TouchableHighlight
+					<TouchableWithoutFeedback
 						onPress={actionLeft}
-						style={styles.header.touchableIOS}
-						underlayColor="#0D47A1"
 					>
-						<Image
-							style={styles.header.actionIcon}
-							source={iconLeft}
-						/>
-					</TouchableHighlight>
+						<View style={styles.header.touchableIOS}>
+							<Image
+								style={styles.header.actionIcon}
+								source={iconLeft}
+							/>
+						</View>
+					</TouchableWithoutFeedback>
 				);
 			}
 
 			return (
-				<TouchableHighlight
+				<TouchableWithoutFeedback
 					onPress={actionLeft}
-					style={styles.header.touchable}
-					underlayColor="#0D47A1"
 				>
-					<Image
-						style={styles.header.actionIcon}
-						source={iconLeft}
-					/>
-				</TouchableHighlight>
+					<View style={styles.header.touchable}>
+						<Image
+							style={styles.header.actionIcon}
+							source={iconLeft}
+						/>
+					</View>
+				</TouchableWithoutFeedback>
 			);
 		}
 
@@ -53,30 +52,30 @@ class Header extends Component {
 		if (iconRight) {
 			if (Platform.OS === 'ios') {
 				return (
-					<TouchableHighlight
+					<TouchableWithoutFeedback
 						onPress={actionRight}
-						style={styles.header.touchableIOS}
-						underlayColor="#0D47A1"
 					>
-						<Image
-							style={styles.header.actionIcon}
-							source={iconRight}
-						/>
-					</TouchableHighlight>
+						<View style={styles.header.touchableIOS}>
+							<Image
+								style={styles.header.actionIcon}
+								source={iconRight}
+							/>
+						</View>
+					</TouchableWithoutFeedback>
 				);
 			}
 
 			return (
-				<TouchableHighlight
+				<TouchableWithoutFeedback
 					onPress={actionRight}
-					style={styles.header.touchable}
-					underlayColor="#0D47A1"
 				>
-					<Image
-						style={styles.header.actionIcon}
-						source={iconRight}
-					/>
-				</TouchableHighlight>
+					<View style={styles.header.touchable}>
+						<Image
+							style={styles.header.actionIcon}
+							source={iconRight}
+						/>
+					</View>
+				</TouchableWithoutFeedback>
 			);
 		}
 

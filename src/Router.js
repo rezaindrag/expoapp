@@ -7,6 +7,7 @@ import SearchPost from './components/screens/SearchPost';
 import PostComments from './components/screens/PostComments';
 import VideoPlay from './components/screens/VideoPlay';
 import Profile from './components/screens/Profile';
+import VideoListPreview from './components/screens/VideoListPreview';
 
 export default StackNavigator({
 	Main: { 
@@ -53,6 +54,12 @@ export default StackNavigator({
 	},
 	Profile: {
 		screen: Profile,
+		navigationOptions: {
+			header: null
+		}
+	},
+	VideoListPreview: {
+		screen: VideoListPreview,
 		navigationOptions: {
 			header: null
 		}

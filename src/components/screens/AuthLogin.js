@@ -335,7 +335,7 @@ class Auth extends Component {
 				return (
 					<Header
 						title="Masuk"
-						iconLeft={require('../../../assets/icons/clear.png')}
+						iconLeft={require('../../../assets/icons/ic_close_white_48dp.png')}
 						actionLeft={this.handleClosePressed.bind(this)}
 					/>
 				);
@@ -343,7 +343,7 @@ class Auth extends Component {
 				return (
 					<Header
 						title="Daftar"
-						iconLeft={require('../../../assets/icons/clear.png')}
+						iconLeft={require('../../../assets/icons/ic_close_white_48dp.png')}
 						actionLeft={this.handleClosePressed.bind(this)}
 					/>
 				);
@@ -352,7 +352,7 @@ class Auth extends Component {
 			return (
 				<Header
 					title="Lupa Password"
-					iconLeft={require('../../../assets/icons/clear.png')}
+					iconLeft={require('../../../assets/icons/ic_close_white_48dp.png')}
 					actionLeft={this.handleClosePressed.bind(this)}
 				/>
 			);
@@ -362,7 +362,7 @@ class Auth extends Component {
 			return (
 				<Header
 					title="Masuk"
-					iconLeft={require('../../../assets/icons/clear.png')}
+					iconLeft={require('../../../assets/icons/ic_close_white_48dp.png')}
 					actionLeft={this.handleClosePressed.bind(this)}
 					addStyle={{ paddingTop: 0, height: 54 }}
 				/>
@@ -371,7 +371,7 @@ class Auth extends Component {
 			return (
 				<Header
 					title="Daftar"
-					iconLeft={require('../../../assets/icons/clear.png')}
+					iconLeft={require('../../../assets/icons/ic_close_white_48dp.png')}
 					actionLeft={this.handleClosePressed.bind(this)}
 					addStyle={{ paddingTop: 0, height: 54 }}
 				/>
@@ -381,7 +381,7 @@ class Auth extends Component {
 		return (
 			<Header
 				title="Lupa Password"
-				iconLeft={require('../../../assets/icons/clear.png')}
+				iconLeft={require('../../../assets/icons/ic_close_white_48dp.png')}
 				actionLeft={this.handleClosePressed.bind(this)}
 				addStyle={{ paddingTop: 0, height: 54 }}
 			/>

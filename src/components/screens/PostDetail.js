@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import _ from 'lodash';
 import HTML from 'react-native-render-html';
+import HeaderImageScrollView, { TriggeringView } from 'react-native-image-header-scroll-view';
 import { Header } from '../partials/commons';
 import styles from '../../styles';
 import api from '../../api';
@@ -51,11 +52,16 @@ class PostDetail extends Component {
 		}
 		
 		return (
-			<ScrollView style={styles.content.scrollContainer}>
-				<Image 
-		 			style={{ width: '100%', height: 200 }}
-		 			source={{ uri: thumbnailUrl }}
-		 		/>
+			<HeaderImageScrollView
+				maxHeight={250}
+				minHeight={Platform.OS === 'ios' ? 75 : 78}
+				renderHeader={() => (
+					<Image source={{ uri: thumbnailUrl }} style={{ width: '100%', height: 250 }} />
+				)}
+				minOverlayOpacity={0}
+				maxOverlayOpacity={1}
+				overlayColor="#1565C0"
+			>
 				<View style={styles.postDetail.titleWrapper}>
 					<Text style={styles.postDetail.titleText}>{ title }</Text>
 				</View>
@@ -65,30 +71,18 @@ class PostDetail extends Component {
 						htmlStyles={styles.postDetail.htmlStyles}
 					/>
 				</View>
-			</ScrollView>
+			</HeaderImageScrollView>
 		);
 	}
 
 	renderHeader() {
 		const { goBack } = this.props.navigation;
 
-		if (Platform.OS === 'ios') {
-			return (
-				<Header
-					iconLeft={require('../../../assets/icons/ic_arrow_back_white_48dp.png')}
-					actionLeft={() => goBack()}
-					iconRight={require('../../../assets/icons/ic_share_white_48dp.png')}
-					actionRight={() => {}}
-				/>
-			);
-		}
-
 		return (
 			<Header
 				iconLeft={require('../../../assets/icons/ic_arrow_back_white_48dp.png')}
 				actionLeft={() => goBack()}
-				iconRight={require('../../../assets/icons/ic_share_white_48dp.png')}
-				actionRight={() => {}}
+				addStyle={{ backgroundColor: 'transparent', position: 'absolute', top: 0, zIndex: 10 }}
 			/>
 		);
 	}

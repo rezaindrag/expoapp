@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
 	View,
-	TouchableHighlight,
 	TouchableWithoutFeedback,
 	Image,
 	TextInput,
@@ -18,18 +17,16 @@ class HeaderSearch extends Component {
 			return (
 				<View style={styles.searchPost.headerContainerIOS}>
 					<View style={styles.header.actionSection}>
-						<TouchableHighlight
+						<TouchableWithoutFeedback
 							onPress={() => goBack()}
-							style={styles.header.touchable}
-							underlayColor="#DDD"
 						>
-							<View>
+							<View style={styles.header.touchableIOS}>
 								<Image 
 									style={styles.header.actionIcon}
 									source={require('../../../../assets/icons/ic_arrow_back_black_48dp.png')}
 								/>
 							</View>
-						</TouchableHighlight>
+						</TouchableWithoutFeedback>
 					</View>
 					<View style={styles.searchPost.inputSearchWrapper}>
 						<TextInput 
@@ -48,18 +45,16 @@ class HeaderSearch extends Component {
 		return (
 			<View style={styles.searchPost.headerContainer}>
 				<View style={styles.header.actionSection}>
-					<TouchableHighlight
+					<TouchableWithoutFeedback
 						onPress={() => goBack()}
-						style={styles.header.touchable}
-						underlayColor="#DDD"
 					>
-						<View>
+						<View style={styles.header.touchable}>
 							<Image 
 								style={styles.header.actionIcon}
 								source={require('../../../../assets/icons/ic_arrow_back_black_48dp.png')}
 							/>
 						</View>
-					</TouchableHighlight>
+					</TouchableWithoutFeedback>
 				</View>
 				<View style={styles.searchPost.inputSearchWrapper}>
 					<TextInput 

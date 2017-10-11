@@ -60,18 +60,22 @@ class UpgradeAccount extends Component {
 					{ this.renderHeader() }
 					<ScrollView style={{ width: '100%' }}>
 						<View style={styles.upgradeAccount.wrapper}>
-							<Text style={styles.upgradeAccount.label}>1. Beli Akun</Text>
-							<Text style={styles.upgradeAccount.text}>Anda dapat membeli akun premium: </Text>
-							<Text style={[styles.upgradeAccount.label, { color: '#FF5722', fontSize: 14 }]}>80rb/bulan</Text>
-							<Text style={[styles.upgradeAccount.text, { marginBottom: 0 }]}>Gratis seluruh video elearning.</Text>
-							<Divider />
-							<Text style={styles.upgradeAccount.label}>2. Pembayaran</Text>
-							<Text style={styles.upgradeAccount.text}>Untuk pembayaran, silahkan transfer ke nomor rekening: </Text>
-							<Text style={[styles.upgradeAccount.label, { color: '#FF5722', fontSize: 14, marginBottom: 0 }]}>3754945 a/n Renra Iwa Sedoya</Text>
-							<Divider />
-							<Text style={styles.upgradeAccount.label}>3. Konfirmasi Pembayaran</Text>
-							<Text style={styles.upgradeAccount.text}>Setelah transfer silahkan lakukan konfirmasi pembayaran:</Text>
-							<Text style={[styles.upgradeAccount.label, { color: '#FF5722', fontSize: 14, marginBottom: 0 }]}>08187834455 (WhatsApp)</Text>
+							<View style={{ marginBottom: 15 }}>
+								<Text style={styles.upgradeAccount.label}>1. Beli Akun</Text>
+								<Text style={styles.upgradeAccount.text}>Anda dapat membeli akun premium: </Text>
+								<Text style={[styles.upgradeAccount.label, { color: '#FF5722', fontSize: 14 }]}>80rb/bulan</Text>
+								<Text style={[styles.upgradeAccount.text, { marginBottom: 0 }]}>Gratis seluruh video elearning.</Text>
+							</View>
+							<View style={{ marginBottom: 15 }}>
+								<Text style={styles.upgradeAccount.label}>2. Pembayaran</Text>
+								<Text style={styles.upgradeAccount.text}>Untuk pembayaran, silahkan transfer ke nomor rekening: </Text>
+								<Text style={[styles.upgradeAccount.label, { color: '#FF5722', fontSize: 14, marginBottom: 0 }]}>3754945 a/n Renra Iwa Sedoya</Text>
+							</View>
+							<View style={{ marginBottom: 15 }}>
+								<Text style={styles.upgradeAccount.label}>3. Konfirmasi Pembayaran</Text>
+								<Text style={styles.upgradeAccount.text}>Setelah transfer silahkan lakukan konfirmasi pembayaran:</Text>
+								<Text style={[styles.upgradeAccount.label, { color: '#FF5722', fontSize: 14, marginBottom: 0 }]}>08187834455 (WhatsApp)</Text>
+							</View>
 						</View>
 					</ScrollView>
 				</View>

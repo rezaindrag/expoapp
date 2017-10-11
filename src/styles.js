@@ -22,7 +22,7 @@ const styles = {
 		divider: { backgroundColor: '#DDD', height: 1, marginBottom: 8, marginTop: 8 },
 		buttonGreen: { 
 			buttonWrapper: { paddingRight: 10, paddingLeft: 10, height: 30, borderRadius: 4, justifyContent: 'center', alignItems: 'center', backgroundColor: '#4CAF50' },
-			buttonText: { color: '#FFF', fontSize: 14 } 
+			buttonText: { color: '#FFF', fontSize: 15 } 
 		},
 		connected: {
 			statusOfflineWrapper: { width: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(000, 000, 000, 0.5)', height: 35, position: 'absolute', bottom: 0, zIndex: 10 },
@@ -51,7 +51,7 @@ const styles = {
 		menuItemTitleWrapper: { flex: 6, justifyContent: 'center', alignItems: 'flex-start' },
 		menuItemTitleDropdownWrapper: { flex: 6, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
 		menuItemTitleBadgeWrapper: { flex: 6, flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' },
-		menuItemTitle: { fontSize: 14, color: TEXT_COLOR },
+		menuItemTitle: { fontSize: 15, color: TEXT_COLOR },
 		accountStatus: { fontSize: 13, color: '#FFF' },
 		accountStatusBadge: { marginLeft: 5, backgroundColor: '#D84315', borderRadius: 4, paddingLeft: 3, paddingRight: 3, height: 12 },
 		accountStatusBadgeText: { color: '#FFF', fontSize: 10 }
@@ -59,7 +59,7 @@ const styles = {
 	header: {
 		container: { height: 78, paddingTop: 24, backgroundColor: PRIMARY_COLOR, alignItems: 'center', flexDirection: 'row' },
 		containerIOS: { height: 74, paddingTop: 24, backgroundColor: PRIMARY_COLOR, alignItems: 'center', flexDirection: 'row' },
-		titleSection: {	alignItems: 'center', justifyContent: 'center', flex: 1, paddingLeft: 14, paddingRight: 14 },
+		titleSection: {	alignItems: Platform.OS === 'ios' ? 'center' : 'flex-start', justifyContent: 'center', flex: 1, paddingLeft: 14, paddingRight: 14 },
 		title: { color: 'white', fontSize: 20, fontWeight: 'bold' },
 		actionSection: { width: 50, alignItems: 'center', justifyContent: 'center' },
 		actionSectionIOS: { width: 50, alignItems: 'center', justifyContent: 'center' },
@@ -69,7 +69,7 @@ const styles = {
 	},
 	subheader: {
 		container: { height: 35, backgroundColor: SUBHEADER_COLOR, justifyContent: 'center', alignItems: 'center', paddingLeft: 17, paddingRight: 17 },
-		text: {	fontSize: 16, color: TEXT_COLOR }
+		text: {	fontSize: 15, color: TEXT_COLOR }
 	},
 	content: {
 		scrollContainer: { backgroundColor: 'white' },
@@ -82,26 +82,26 @@ const styles = {
 		},
 		categorySection: { width: (SCREEN_WIDTH / 2), height: (SCREEN_WIDTH / 2), justifyContent: 'center', alignItems: 'center', borderWidth: 0.5, borderColor: '#DDD'	},
 		imageCategory: { borderRadius: 100,	borderWidth: 1,	borderColor: '#DDD', width: (((SCREEN_WIDTH / 2) * 50)/100), height: (((SCREEN_WIDTH / 2) * 50)/100), marginBottom: 8 },
-		titleCategory: { color: TEXT_COLOR, fontSize: 16, }
+		titleCategory: { color: TEXT_COLOR, fontSize: 15, }
 	},
 	postList: {
 		scrollContainer: { flex: 1, backgroundColor: '#DDD' },
-		container: { flex: 1, flexDirection: 'column', padding: 10 },
+		container: { flex: 1, flexDirection: 'column', padding: 10, marginBottom: 30 },
 		postItem: {	backgroundColor: '#fff', flex: 1, flexDirection: 'row' },
 		titleWrapper: { flex: 1, paddingTop: 10, paddingLeft: 10, paddingRight: 10 },
-		title: { color: TEXT_COLOR, fontWeight: 'bold', fontSize: 14 },
+		title: { color: TEXT_COLOR, fontSize: 15 },
 		thumbWrapper: { width: 100, justifyContent: 'center', alignItems: 'center'	},
 		thumb: { width: 100, height: 100 },
 		containerError: { flex: 1, backgroundColor: '#DDD', justifyContent: 'center', alignItems: 'center' }
 	},
 	postDetail: {
 		titleWrapper: { backgroundColor: 'white', paddingTop: 12, paddingBottom: 12, paddingLeft: 10, paddingRight: 10, borderBottomWidth: 1, borderBottomColor: '#ddd' },
-		titleText: { color: TEXT_COLOR, fontSize: 16, fontWeight: 'bold' },
+		titleText: { color: TEXT_COLOR, fontSize: 16 },
 		authorWrapper: { backgroundColor: 'white', paddingTop: 12, paddingBottom: 12, paddingLeft: 10, paddingRight: 10, borderBottomWidth: 1, borderBottomColor: '#ddd' },
-		authorText: { fontSize: 14, color: TEXT_COLOR },
-		postDate: { fontSize: 14, color: TEXT_COLOR },
+		authorText: { fontSize: 15, color: TEXT_COLOR },
+		postDate: { fontSize: 15, color: TEXT_COLOR },
 		content: { backgroundColor: 'white', paddingLeft: 10, paddingRight: 10, paddingTop: 12, borderBottomWidth: 1, borderBottomColor: '#ddd' },
-		//htmlStyles: { p: { color: TEXT_COLOR, fontSize: 14, marginBottom: 8, marginTop: 0, lineHeight: 22 } },
+		//htmlStyles: { p: { color: TEXT_COLOR, fontSize: 15, marginBottom: 8, marginTop: 0, lineHeight: 22 } },
 		fabShare: { display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'absolute', bottom: 20, right: 20, width: 60, height: 60, borderRadius: 100, backgroundColor: '#2196F3' },
 		imgShare: { width: 20, height: 20 }
 	},
@@ -109,47 +109,47 @@ const styles = {
 		headerContainer: { height: 78, paddingTop: 24, backgroundColor: '#F7F7F7', flexDirection: 'row' },
 		headerContainerIOS: { height: 74, paddingTop: 24, backgroundColor: '#F7F7F7', flexDirection: 'row' },
 		inputSearchWrapper: { flex: 1, alignItems: 'flex-start', justifyContent: 'center' },
-		inputSearch: { color: TEXT_COLOR, height: 45, width: '100%', backgroundColor: '#F7F7F7', fontSize: 16, paddingRight: 12 },
+		inputSearch: { color: TEXT_COLOR, height: 45, width: '100%', backgroundColor: '#F7F7F7', fontSize: 15, paddingRight: 12 },
 		notFoundWrapper: { justifyContent: 'center', alignItems: 'center', height: 50 }
 	},
 	postComments: {
 		content: { backgroundColor: 'white', paddingTop: 12,	paddingBottom: 12, paddingLeft: 10, paddingRight: 10 },
-		authorUrl: { fontSize: 14, color: TEXT_COLOR },
+		authorUrl: { fontSize: 15, color: TEXT_COLOR },
 		commentSection: { paddingBottom: 10, marginBottom: 10, borderBottomWidth: 1, borderColor: '#DDD' },
-		authorName: { color: TEXT_COLOR, fontSize: 16 }, 
-		authorDate: { fontSize: 14, color: TEXT_COLOR },
-		comment: { p: { color: TEXT_COLOR, fontSize: 16, marginTop: 8, marginBottom: 0 } },
+		authorName: { color: TEXT_COLOR, fontSize: 15 }, 
+		authorDate: { fontSize: 15, color: TEXT_COLOR },
+		comment: { p: { color: TEXT_COLOR, fontSize: 15, marginTop: 8, marginBottom: 0 } },
 		adminText: { fontSize: 12	}
 	},
 	auth: {
 		container: { flex: 1, alignItems: 'center', paddingBottom: 50 },
-		formContainerLandscape: { width: 350, paddingTop: 18, paddingBottom: 18, alignSelf: 'center' },
-		formContainerPortrait: { padding: 18, width: '100%', alignSelf: 'center' },
-		inputLogin: { color: TEXT_COLOR, fontSize: 16, borderWidth: 1, backgroundColor: '#FFF', borderColor: '#DDD', borderRadius: 4, height: 40, paddingRight: 10, paddingLeft: 10, marginBottom: 10 },
+		formContainerLandscape: { width: 350, paddingTop: 15, paddingBottom: 15, alignSelf: 'center' },
+		formContainerPortrait: { padding: 15, width: '100%', alignSelf: 'center' },
+		inputLogin: { color: TEXT_COLOR, fontSize: 15, borderWidth: 1, backgroundColor: '#FFF', borderColor: '#DDD', borderRadius: 4, height: 40, paddingRight: 10, paddingLeft: 10, marginBottom: 10 },
 		buttonLogin: { backgroundColor: '#4CAF50', justifyContent: 'center', alignItems: 'center', height: 40, borderRadius: 4 },
-		buttonTextLogin: { color: '#FFF', fontSize: 16 },
+		buttonTextLogin: { color: '#FFF', fontSize: 15 },
 		buttonLoginSocial: { backgroundColor: '#4CAF50', justifyContent: 'center', alignItems: 'center', height: 30, borderRadius: 4 },
-		buttonTextLoginSocial: { color: '#FFF', fontSize: 14 },
+		buttonTextLoginSocial: { color: '#FFF', fontSize: 15 },
 		buttonClose: { height: 50, justifyContent: 'center', alignItems: 'center', backgroundColor: '#DDD' },
 		buttonIconClose: { height: 25, width: 25 },
 		errorWrapper: { padding: 10, marginTop: 18, marginRight: 17, marginLeft: 17, backgroundColor: '#ffcdd2', borderRadius: 4, borderWidth: 1, borderColor: '#ef9a9a' },
-		errorText: { color: '#b71c1c', fontSize: 14 },
-		messageWrapper: { padding: 10, marginTop: 18, marginRight: 17, marginLeft: 17, backgroundColor: '#C8E6C9', borderRadius: 4, borderWidth: 1, borderColor: '#2E7D32' },
-		messageText: { color: '#2E7D32', fontSize: 14 },
+		errorText: { color: '#b71c1c', fontSize: 15 },
+		messageWrapper: { padding: 10, marginTop: 15, marginRight: 17, marginLeft: 17, backgroundColor: '#C8E6C9', borderRadius: 4, borderWidth: 1, borderColor: '#2E7D32' },
+		messageText: { color: '#2E7D32', fontSize: 15 },
 		footer: { flexDirection: 'row', position: 'absolute', bottom: 0, borderTopWidth: 1, borderColor: '#DDD', justifyContent: 'center', alignItems: 'center', height: 50, flex: 1, width: '100%' },
 		footerTextRegular: { color: TEXT_COLOR, fontSize: 13 },
 		footerTextBold: { color: TEXT_COLOR, fontSize: 13, fontWeight: 'bold' }
 	},
 	videoList: {
 		introduceContainer: { padding: 10, backgroundColor: '#FFF' },
-		mainTitle: { fontSize: 18, color: TEXT_COLOR, marginBottom: 10 },
+		mainTitle: { fontSize: 16, color: TEXT_COLOR, marginBottom: 10 },
 		videoPreview: { width: '100%', height: 150 },
-		description: { fontSize: 14, color: TEXT_COLOR, marginBottom: 8 },
+		description: { fontSize: 15, color: TEXT_COLOR, marginBottom: 8 },
 		buttonBuyNow: { height: 35, backgroundColor: '#4CAF50', borderRadius: 80, justifyContent: 'center', alignItems: 'center', marginTop: 8, marginBottom: 9 },
-		buttonBuyNowText: { fontSize: 14, color: '#FFF' },
+		buttonBuyNowText: { fontSize: 15, color: '#FFF' },
 		postItem: {	borderBottomWidth: 1, borderColor: '#DDD', backgroundColor: '#FFF', flex: 1, flexDirection: 'row', paddingTop: 12, paddingBottom: 12, justifyContent: 'center' },
 		titleWrapper: { flex: 1, justifyContent: 'center', paddingLeft: 10, paddingRight: 10 },
-		title: { color: TEXT_COLOR, fontSize: 16 },
+		title: { color: TEXT_COLOR, fontSize: 15 },
 		timeWrapper: { width: 100, justifyContent: 'center', alignItems: 'center' },
 		time: { color: '#1565C0', fontSize: 13,  }
 	},
@@ -164,12 +164,12 @@ const styles = {
 	},
 	notification: {
 		wrapper: { flexDirection: 'column', backgroundColor: '#757575', justifyContent: 'center', alignItems: 'center', paddingTop: 10, paddingBottom: 12 },
-		text: { color: '#FFF', fontSize: 16, textAlign: 'center' },
+		text: { color: '#FFF', fontSize: 15, textAlign: 'center' },
 	},
 	upgradeAccount: {
-		wrapper: { width: '100%', paddingTop: 12, paddingLeft: 10, paddingRight: 10 },
-		label: { fontSize: 18, color: TEXT_COLOR, marginBottom: 8 },
-		text: { fontSize: 14, color: TEXT_COLOR, marginBottom: 8 }
+		wrapper: { width: '100%', paddingTop: 15, paddingLeft: 15, paddingRight: 15 },
+		label: { fontSize: 15, color: TEXT_COLOR, marginBottom: 8 },
+		text: { fontSize: 15, color: TEXT_COLOR, marginBottom: 8 }
 	},
 	profile: {
 		scrollContainer: { flex: 1, backgroundColor: '#FFF' },
@@ -177,16 +177,16 @@ const styles = {
 		section: { paddingTop: 12,	paddingBottom: 12, paddingLeft: 10, paddingRight: 10, backgroundColor: '#FFF', flex: 1, justifyContent: 'center', borderBottomWidth: 1, borderColor: '#DDD'	},
 		imageProfileWrapper: { height: 105, width: 105,	backgroundColor: '#CCC', borderRadius: 100, justifyContent: 'center', alignItems: 'center' },
 		imageProfile: {	height: 100, width: 100 },
-		textLabel: { fontSize: 16, color: TEXT_COLOR },
-		textValue: { fontSize: 16, color: TEXT_COLOR },
+		textLabel: { fontSize: 15, color: TEXT_COLOR },
+		textValue: { fontSize: 15, color: TEXT_COLOR },
 		buttonWrapper: { flex: 1, flexDirection: 'row', justifyContent: 'flex-start' },
 		buttonAdditionalStyle: { marginTop: 8 }
 	},
 	paymentConfirmation: {
-		formLabel: { fontSize: 16, color: TEXT_COLOR },
-		formInput: { fontSize: 16, color: TEXT_COLOR, height: 40, borderRadius: 4, borderColor: '#DDD', borderWidth: 1, paddingLeft: 10, paddingRight: 10, marginBottom: 8 },
+		formLabel: { fontSize: 15, color: TEXT_COLOR },
+		formInput: { fontSize: 15, color: TEXT_COLOR, height: 40, borderRadius: 4, borderColor: '#DDD', borderWidth: 1, paddingLeft: 10, paddingRight: 10, marginBottom: 8 },
 		formDatePickerWrapper: { justifyContent: 'center', height: 40, borderRadius: 4, borderColor: '#DDD', borderWidth: 1, paddingLeft: 10, paddingRight: 10, marginBottom: 8 },
-		formDatePickerText: { fontSize: 16, color: '#9E9E9E' }
+		formDatePickerText: { fontSize: 15, color: '#9E9E9E' }
 	}
 };
 

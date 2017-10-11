@@ -6,6 +6,7 @@ import {
 	Dimensions,
 	TouchableHighlight,
 	TouchableNativeFeedback,
+	TouchableWithoutFeedback,
 	ListView,
 	StatusBar,
 	Image,
@@ -14,7 +15,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import { Header } from '../partials/commons';
+import { Header, GetVideoButton } from '../partials/commons';
 import styles from '../../styles';
 import { 
 	fetchPost, 
@@ -40,7 +41,7 @@ class PostList extends Component {
 		return <PostItem key={i} { ...this.props } item={item} i={i} />
 	}
 
-	postList() {
+	renderPostList() {
 		const { categoryId } = this.props.navigation.state.params;
 		const { dataPost, error, loading } = this.props;
 
@@ -114,7 +115,8 @@ class PostList extends Component {
 					iconRight={require('../../../assets/icons/search.png')}
 					actionRight={() => navigate('SearchPost')}
 				/>
-				{ this.postList() }
+				{ this.renderPostList() }
+				<GetVideoButton {...this.props} />
 			</View>
 		);
 	}

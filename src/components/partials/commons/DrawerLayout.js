@@ -17,6 +17,7 @@ import { connect } from 'react-redux';
 import firebase from 'firebase';
 import _ from 'lodash';
 import SideMenu from 'react-native-side-menu';
+import Communications from 'react-native-communications';
 import styles from '../../../styles';
 import api from '../../../api';
 import { Header, SubHeader } from './';
@@ -162,7 +163,7 @@ class DrawerAndroid extends Component {
 
 		return (
 			<Header
-				title="logo"
+				title="MarketingApp"
 				iconLeft={require('../../../../assets/icons/ic_menu_white_48dp.png')}
 				actionLeft={this.handleButtonSideMenuPressed.bind(this)}
 				iconRight={require('../../../../assets/icons/ic_search_white_48dp.png')}
@@ -179,7 +180,6 @@ class DrawerAndroid extends Component {
 				var label = (
 					<View>
 						<Text style={styles.sideMenu.nameProfile}>{ api.limitWords(this.props.fullName, 1) }</Text>
-						<Text style={styles.sideMenu.accountStatus}>{ this.props.email }</Text>
 					</View>
 				);
 			} else {
@@ -354,6 +354,8 @@ class DrawerAndroid extends Component {
 	}
 
 	renderNavigationView() {
+		const { navigate } = this.props.navigation;
+
 		return (
 			<ScrollView style={styles.sideMenu.container}>
 				{ this.renderHeaderMenu() }
@@ -404,7 +406,7 @@ class DrawerAndroid extends Component {
 					{ this.renderAuthNavigation() }
 					<View>
 						<TouchableHighlight
-							onPress={() => {}}
+							onPress={() => Communications.email(['mail.rezaindra@gmail.com'], null, null, 'Kritik & Saran', null)}
 							underlayColor="#f4f5f7"
 						>
 							<View style={[styles.sideMenu.menuItemWrapper, { paddingLeft: 17 }]}>
@@ -416,7 +418,7 @@ class DrawerAndroid extends Component {
 					</View>
 					<View>
 						<TouchableHighlight
-							onPress={() => {}}
+							onPress={this.handleNavigate.bind(this, 'About')}
 							underlayColor="#f4f5f7"
 						>
 							<View style={[styles.sideMenu.menuItemWrapper, { paddingLeft: 17 }]}>

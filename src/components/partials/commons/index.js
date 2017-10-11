@@ -4,3 +4,4 @@ export * from './SubHeader';
 export * from './DrawerLayout';
 export * from './Divider';
 export * from './VideoClose';
+export * from './GetVideoButton';
